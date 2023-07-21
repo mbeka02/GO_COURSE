@@ -16,4 +16,9 @@ use (
 ./errors/3-custom_errors
 ./errors/5-errors_package
 ./errors/2-formatting_strings
+./loops/1-intro
+./loops/2-omit_condition
+./loops/3-while
+./loops/4-loops_fizzbuzz
+./loops/5-continue_and_break
 )

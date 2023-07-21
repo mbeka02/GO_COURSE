@@ -6,6 +6,19 @@ import (
 
 func maxMessages(thresh float64) int {
 	// ?
+	sum:=0.0
+
+	for i:=0; ;i++{
+		
+		sum+= 1+float64(i)*0.01
+
+		if(sum>thresh){
+			return i
+		}
+	
+}
+
+	//return int(thresh)
 }
 
 // don't edit below this line
