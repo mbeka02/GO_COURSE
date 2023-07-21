@@ -1,0 +1,19 @@
+go 1.20
+
+use (
+./structs/1_intro
+./structs/2-nested_structs
+./structs/3-anonymous_structs
+./structs/3a-anonymous_structs
+./structs/4-embedded_structs
+./structs/5-methods
+./interfaces/1-interfaces
+./interfaces/2-implements
+./interfaces/5-multiple_interfaces
+./interfaces/7-type_assertion
+./interfaces/8-type_switch
+./errors/1-errors
+./errors/3-custom_errors
+./errors/5-errors_package
+./errors/2-formatting_strings
+)
