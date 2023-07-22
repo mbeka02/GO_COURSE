@@ -9,6 +9,19 @@ type cost struct {
 
 func getCostsByDay(costs []cost) []float64 {
 	// ?
+	//create slice
+	slice := []float64{}
+	for i:=0 ; i< len(costs) ; i++ {
+		cost:=costs[i]
+		// append slice.
+		for cost.day>= len(slice){
+			slice=append(slice, 0.0)
+		}
+		//add up costs for the day
+		slice[cost.day]+=cost.value
+	}
+	
+	return slice
 }
 
 // dont edit below this line

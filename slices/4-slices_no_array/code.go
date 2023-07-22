@@ -4,6 +4,15 @@ import "fmt"
 
 func getMessageCosts(messages []string) []float64 {
 	// ?
+	//pre-allocate new slice for costs using the len of passed messages
+	slice := make([]float64, len(messages))
+
+	for i := 0; i < len(messages); i++ {
+		//cost = length of message at index*0.01
+		cost := float64(len(messages[i])) * 0.01
+		slice[i] = cost
+	}
+	return slice
 }
 
 // don't edit below this line

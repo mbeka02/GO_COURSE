@@ -10,6 +10,8 @@ const (
 
 func getMessageWithRetries() [3]string {
 	// ?
+	var arr =[3]string{retry1,retry2,retry3}
+	return arr
 }
 
 // don't touch below this line

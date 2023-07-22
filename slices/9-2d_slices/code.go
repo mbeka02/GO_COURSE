@@ -4,9 +4,21 @@ import "fmt"
 
 func createMatrix(rows, cols int) [][]int {
 	// ?
+	//2-D matrix
+	matrix := [][]int{}
+
+	for i := 0; i < rows; i++ {
+		row := []int{}
+		for j := 0; j < cols; j++ {
+			//mult row indx with col indx
+			row = append(row, i*j)
+		}
+		matrix = append(matrix, row)
+	}
+	return matrix
 }
 
-// dont edit below this line
+
 
 func test(rows, cols int) {
 	fmt.Printf("Creating %v x %v matrix...\n", rows, cols)
@@ -22,4 +34,5 @@ func main() {
 	test(5, 5)
 	test(10, 10)
 	test(15, 15)
+	test (14,14)
 }

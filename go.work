@@ -21,4 +21,11 @@ use (
 ./loops/3-while
 ./loops/4-loops_fizzbuzz
 ./loops/5-continue_and_break
+./slices/1-arrays
+./slices/2-slices
+./slices/4-slices_no_array
+./slices/7-variadic_functions
+./slices/8-append
+./slices/9-2d_slices
+./slices/11-range
 )
