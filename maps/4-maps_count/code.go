@@ -7,10 +7,23 @@ import (
 )
 
 func getCounts(userIDs []string) map[string]int {
-	// ?
+
+//create map
+	m := map[string]int{}
+
+	for _, id := range userIDs {
+		//if key does not exist
+		if _, ok := m[id]; !ok {
+			//init value to 0 for non-existent key
+			m[id] = 0
+		}
+		//track no .of times string/key has showed up
+		m[id]++
+	}
+	return m
 }
 
-// don't edit below this line
+
 
 func test(userIDs []string, ids []string) {
 	fmt.Printf("Generating counts for %v user IDs...\n", len(userIDs))

@@ -28,4 +28,7 @@ use (
 ./slices/8-append
 ./slices/9-2d_slices
 ./slices/11-range
+./maps/1-maps
+./maps/2-mutating_maps
+./maps/4-maps_count
 )

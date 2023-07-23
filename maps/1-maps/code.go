@@ -1,14 +1,32 @@
 package main
 
 import (
+	"errors"
 	"fmt"
 )
 
 func getUserMap(names []string, phoneNumbers []int) (map[string]user, error) {
-	// ?
+	// create map
+	m := make(map[string]user)
+
+	//ensure names and phonenumber array are of equal length
+	if len(phoneNumbers) != len(names) {
+		return nil, errors.New("invalid sizes")
+	}
+	for i := 0; i < len(names); i++ {
+		name := names[i]
+		m[name] = user{
+			name:        name,
+			phoneNumber: phoneNumbers[i],
+		}
+	}
+	
+
+	return m, nil
+
 }
 
-// don't touch below this line
+
 
 type user struct {
 	name        string
