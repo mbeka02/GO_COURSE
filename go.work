@@ -31,4 +31,5 @@ use (
 ./maps/1-maps
 ./maps/2-mutating_maps
 ./maps/4-maps_count
+./maps/6-nested_maps
 )

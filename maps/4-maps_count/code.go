@@ -17,7 +17,7 @@ func getCounts(userIDs []string) map[string]int {
 			//init value to 0 for non-existent key
 			m[id] = 0
 		}
-		//track no .of times string/key has showed up
+		//tracks no .of times string/key has showed up and incs that count
 		m[id]++
 	}
 	return m

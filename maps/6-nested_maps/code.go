@@ -5,10 +5,30 @@ import (
 )
 
 func getNameCounts(names []string) map[rune]map[string]int {
-	// ?
-}
+	// nested map
+	m := make(map[rune]map[string]int)
+	for _, name := range names {
+		//firstLetter := rune(0)
+		//don't care about empty name values so just skip if encountered
+		if name == "" {
+			continue
+		}
+        // init value and convert it to rune type
+		firstLetter := rune(name[0])
+        //init map fo non-existent element/map
+		if _, ok := m[firstLetter]; !ok {
+			m[firstLetter] = make(map[string]int)
+		}
+		//init value/element to 0 for non-existent element
+		if _, ok := m[firstLetter][name]; !ok {
+			m[firstLetter][name] = 0
 
-// don't edit below this line
+		}
+		//inc count , so eg bob:2
+		m[firstLetter][name]++
+	}
+	return m
+}
 
 func test(names []string, initial rune, name string) {
 	fmt.Printf("Generating counts for %v names...\n", len(names))
