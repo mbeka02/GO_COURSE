@@ -8,18 +8,17 @@ import (
 
 func deleteIfNecessary(users map[string]user, name string) (deleted bool, err error) {
 	// check if user exists
-	u, ok := users[name]
-    //return error if not found
-	if !ok {
-		return false, errors.New("not found")
+	u,ok:=users[name]
+
+	if(!ok){
+		return false,errors.New("not found")
 	}
 
-	if !u.scheduledForDeletion {
-		return false, nil
+	if(!u.scheduledForDeletion){
+		return false,nil
 	}
-	//delete element
-	delete(users, name)
-	return true, nil
+
+	return true,nil
 }
 
 // don't touch below this line

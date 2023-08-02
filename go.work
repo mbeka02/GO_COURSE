@@ -32,4 +32,6 @@ use (
 ./maps/2-mutating_maps
 ./maps/4-maps_count
 ./maps/6-nested_maps
+./advanced_functions/1-higher-order
+./advanced_functions/3-currying
 )
