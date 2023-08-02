@@ -8,7 +8,7 @@ func getNameCounts(names []string) map[rune]map[string]int {
 	// nested map
 	m := make(map[rune]map[string]int)
 	for _, name := range names {
-		//firstLetter := rune(0)
+		
 		//don't care about empty name values so just skip if encountered
 		if name == "" {
 			continue
