@@ -3,10 +3,12 @@ package main
 import "fmt"
 
 func printReports(messages []string) {
-	// ?
+	for _, message := range messages {
+		printCostReport(func(string) int {
+			return len(message) * 2
+		}, message)
+	}
 }
-
-// don't touch below this line
 
 func test(messages []string) {
 	defer fmt.Println("====================================")

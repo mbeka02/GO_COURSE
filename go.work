@@ -34,4 +34,7 @@ use (
 ./maps/6-nested_maps
 ./advanced_functions/1-higher-order
 ./advanced_functions/3-currying
+./advanced_functions/4-defer
+./advanced_functions/5-closures
+./advanced_functions/7-anonymous_functions
 )
