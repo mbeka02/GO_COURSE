@@ -37,4 +37,6 @@ use (
 ./advanced_functions/4-defer
 ./advanced_functions/5-closures
 ./advanced_functions/7-anonymous_functions
+./pointers/1-pointers_intro
+./pointers/2-pointers_practice
 )

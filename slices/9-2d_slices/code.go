@@ -34,5 +34,5 @@ func main() {
 	test(5, 5)
 	test(10, 10)
 	test(15, 15)
-	test (14,14)
+	//test (10000,10000)
 }
