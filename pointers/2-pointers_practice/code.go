@@ -40,4 +40,13 @@ func main() {
 
 	test(messages1)
 	test(messages2)
+
+	var x int = 50
+	var y *int = &x
+	*y = 100
+	fmt.Println(*y)
+	fmt.Println(y)
+	fmt.Println(&y)
+	fmt.Println(&x)
+	
 }
