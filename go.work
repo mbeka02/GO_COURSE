@@ -1,4 +1,4 @@
-go 1.20
+go 1.21.0
 
 use (
 ./structs/1_intro
@@ -39,4 +39,6 @@ use (
 ./advanced_functions/7-anonymous_functions
 ./pointers/1-pointers_intro
 ./pointers/2-pointers_practice
+./pointers/4-nil_dereference
+./pointers/6-pointer_receiver_code
 )

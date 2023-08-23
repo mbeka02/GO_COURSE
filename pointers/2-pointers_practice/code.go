@@ -34,7 +34,7 @@ func main() {
 
 	messages2 := []string{
 		"well shoot",
-		"Allan is going straight to heck",
+		"Davis is going straight to heck",
 		"dang... that's a tough break",
 	}
 
@@ -43,10 +43,12 @@ func main() {
 
 	var x int = 50
 	var y *int = &x
+	//changes x to 100
 	*y = 100
 	fmt.Println(*y)
 	fmt.Println(y)
 	fmt.Println(&y)
 	fmt.Println(&x)
 	
+
 }
