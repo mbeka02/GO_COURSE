@@ -41,4 +41,5 @@ use (
 ./pointers/2-pointers_practice
 ./pointers/4-nil_dereference
 ./pointers/6-pointer_receiver_code
+./channels/exercises/1-intro
 )
