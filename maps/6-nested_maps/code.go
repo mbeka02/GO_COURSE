@@ -13,7 +13,7 @@ func getNameCounts(names []string) map[rune]map[string]int {
 		if name == "" {
 			continue
 		}
-        // init value and convert it to rune type
+        // init value and cast it to rune type
 		firstLetter := rune(name[0])
         //init map fo non-existent element/map
 		if _, ok := m[firstLetter]; !ok {
