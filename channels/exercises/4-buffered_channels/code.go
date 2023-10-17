@@ -3,14 +3,16 @@ package main
 import "fmt"
 
 func addEmailsToQueue(emails []string) chan string {
-	emailsToSend := make(chan string)
+	//buffer length
+	length:=len(emails)
+	
+	emailsToSend := make(chan string  , length)
 	for _, email := range emails {
 		emailsToSend <- email
 	}
 	return emailsToSend
 }
 
-// TEST SUITE - Don't Touch Below This Line
 
 func sendEmails(batchSize int, ch chan string) {
 	for i := 0; i < batchSize; i++ {

@@ -42,4 +42,12 @@ use (
 ./pointers/4-nil_dereference
 ./pointers/6-pointer_receiver_code
 ./channels/exercises/1-intro
+./channels/exercises/2-channels_deadlock
+./channels/exercises/3-channels_send
+./channels/exercises/4-buffered_channels
+./channels/exercises/5-close
+./channels/exercises/6-range
+./channels/exercises/7-select
+./channels/exercises/8-select_default
+./channels/challenges/1-channels_practice
 )

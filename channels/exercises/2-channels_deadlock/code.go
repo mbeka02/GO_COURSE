@@ -7,14 +7,15 @@ import (
 
 func filterOldEmails(emails []email) {
 	isOldChan := make(chan bool)
-
+  go func(){
 	for _, e := range emails {
-		if e.date.Before(time.Date(2020, 0, 0, 0, 0, 0, 0, time.UTC)) {
+		if e.date.Before(time.Date(2023, 0, 0, 0, 0, 0, 0, time.UTC)) {
 			isOldChan <- true
 			continue
 		}
 		isOldChan <- false
 	}
+}()
 
 	isOld := <-isOldChan
 	fmt.Println("email 1 is old:", isOld)
@@ -24,7 +25,7 @@ func filterOldEmails(emails []email) {
 	fmt.Println("email 3 is old:", isOld)
 }
 
-// TEST SUITE -- Don't touch below this line
+
 
 type email struct {
 	body string
@@ -32,7 +33,7 @@ type email struct {
 }
 
 func test(emails []email) {
-	filterOldEmails(emails)
+filterOldEmails(emails)
 	fmt.Println("==========================================")
 }
 
@@ -86,11 +87,11 @@ func main() {
 		},
 		{
 			body: "Letsa Go!",
-			date: time.Date(2021, 0, 0, 0, 0, 0, 0, time.UTC),
+			date: time.Date(2023, 0, 0, 0, 0, 0, 0, time.UTC),
 		},
 		{
 			body: "Okay...?",
-			date: time.Date(2022, 0, 0, 0, 0, 0, 0, time.UTC),
+			date: time.Date(2023, 0, 0, 0, 0, 0, 0, time.UTC),
 		},
 	})
 }

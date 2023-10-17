@@ -6,10 +6,12 @@ import (
 )
 
 func waitForDbs(numDBs int, dbChan chan struct{}) {
-	// ?
-}
+	// block until we receive numDBs tokens
+	for i := 0; i < numDBs; i++ {
+		<-dbChan
+	}
 
-// don't touch below this line
+}
 
 func test(numDBs int) {
 	dbChan := getDatabasesChannel(numDBs)
@@ -21,9 +23,9 @@ func test(numDBs int) {
 }
 
 func main() {
-	test(3)
-	test(4)
-	test(5)
+	test(30)
+	test(40)
+	test(5555)
 }
 
 func getDatabasesChannel(numDBs int) chan struct{} {

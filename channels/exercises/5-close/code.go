@@ -6,10 +6,19 @@ import (
 )
 
 func countReports(numSentCh chan int) int {
-	// ?
+	
+	total := 0
+	for i := 0; ; i++ {
+		_, ok := <-numSentCh
+         //exit loop if channel is closed
+		if !ok {
+			break
+		}
+		//else inc. tally of the total number of reports
+		total++
+	}
+	return total
 }
-
-// TEST SUITE - Don't touch below this line
 
 func test(numBatches int) {
 	numSentCh := make(chan int)

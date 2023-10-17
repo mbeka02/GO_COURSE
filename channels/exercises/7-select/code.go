@@ -7,10 +7,25 @@ import (
 )
 
 func logMessages(chEmails, chSms chan string) {
-	// ?
+	for i := 0; ; i++ {
+
+		select {
+		case emails, ok := <-chEmails:
+			if !ok {
+				return
+			}
+			logEmail(emails)
+			println(emails)
+		case sms, ok := <-chSms:
+			if !ok {
+				return
+			}
+			logSms(sms)
+		}
+	}
 }
 
-// TEST SUITE - Don't touch below this line
+
 
 func logSms(sms string) {
 	fmt.Println("SMS:", sms)
@@ -30,7 +45,7 @@ func test(sms []string, emails []string) {
 }
 
 func main() {
-	rand.Seed(0)
+	rand.New(rand.NewSource(0))
 	test(
 		[]string{
 			"hi friend",
