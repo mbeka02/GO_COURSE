@@ -50,4 +50,5 @@ use (
 ./channels/exercises/7-select
 ./channels/exercises/8-select_default
 ./channels/challenges/1-channels_practice
+./mutexes/1-mutex
 )
