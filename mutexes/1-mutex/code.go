@@ -65,6 +65,13 @@ func test(sc safeCounter, emailTests []emailTest) {
 }
 
 func main() {
+	m := map[int]int{}
+	mux:=&sync.Mutex{}
+	go writeLoop(m , mux)
+	go readLoop(m , mux)
+    //prevent exiting
+	block:= make( chan struct {})
+	<-block
 	sc := safeCounter{
 		counts: make(map[string]int),
 		mux:    &sync.Mutex{},
@@ -105,4 +112,27 @@ func main() {
 			count: 453,
 		},
 	})
+}
+
+
+
+func writeLoop(m map[int]int , mux * sync.Mutex) {
+	for {
+		mux.Lock()
+		for i := 0; i < 100; i++ {
+			m[i] = i
+		}
+		mux.Unlock()
+	}
+	
+}
+
+func readLoop(m map[int]int , mux * sync.Mutex) {
+	for {
+		mux.Lock()
+		for num, index := range m {
+			fmt.Println(num, "-", index)
+		}
+		mux.Unlock()
+	}
 }

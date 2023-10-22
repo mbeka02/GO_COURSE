@@ -4,9 +4,11 @@ import (
 	"fmt"
 )
 
-// ?
+type biller[C customer] interface {
+	Charge(C) bill
+	Name() string
+}
 
-// don't edit below this line
 
 type userBiller struct {
 	Plan string

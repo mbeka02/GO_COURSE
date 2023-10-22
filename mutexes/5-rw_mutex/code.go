@@ -19,12 +19,10 @@ func (sc safeCounter) inc(key string) {
 }
 
 func (sc safeCounter) val(key string) int {
-	sc.mux.Lock()
-	defer sc.mux.Unlock()
+	sc.mux.RLock()
+	defer sc.mux.RUnlock()
 	return sc.counts[key]
 }
-
-// don't touch below this line
 
 func (sc safeCounter) slowIncrement(key string) {
 	tempCounter := sc.counts[key]

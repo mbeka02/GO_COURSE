@@ -51,4 +51,7 @@ use (
 ./channels/exercises/8-select_default
 ./channels/challenges/1-channels_practice
 ./mutexes/1-mutex
+./mutexes/5-rw_mutex
+./generics/3-constraints
+./generics/5-parametric_constraints
 )
