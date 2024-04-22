@@ -72,6 +72,8 @@ func main() {
     //prevent exiting
 	block:= make( chan struct {})
 	<-block
+	
+	
 	sc := safeCounter{
 		counts: make(map[string]int),
 		mux:    &sync.Mutex{},
@@ -112,11 +114,13 @@ func main() {
 			count: 453,
 		},
 	})
+
 }
 
 
 
 func writeLoop(m map[int]int , mux * sync.Mutex) {
+		
 	for {
 		mux.Lock()
 		for i := 0; i < 100; i++ {

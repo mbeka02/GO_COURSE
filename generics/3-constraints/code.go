@@ -7,7 +7,7 @@ import (
 )
 
 func chargeForLineItem[T lineItem](newItem T, oldItems []T, balance float64) ([]T, float64, error) {
-	// ?
+
 	if balance > newItem.GetCost() {
 		oldItems = append(oldItems, newItem)
 		newBalance := balance - newItem.GetCost()
@@ -19,7 +19,7 @@ func chargeForLineItem[T lineItem](newItem T, oldItems []T, balance float64) ([]
 
 }
 
-// don't edit below this line
+
 
 type lineItem interface {
 	GetCost() float64

@@ -2,15 +2,13 @@ package main
 
 import "fmt"
 
-func getLast[T any](s []T) T{
-if(len(s)==0){
-	var last T
-	return last
+func getLast[T any](s []T) T {
+	if len(s) == 0 {
+		var last T
+		return last
+	}
+	return s[len(s)-1]
 }
-return s[len(s)-1] 
-}
-
-// don't edit below this line
 
 type email struct {
 	message        string
@@ -75,4 +73,5 @@ func test[T any](s []T, desc string) {
 	}
 	fmt.Printf("Last item in list: %v\n", last)
 	fmt.Println(" --- ")
+	
 }

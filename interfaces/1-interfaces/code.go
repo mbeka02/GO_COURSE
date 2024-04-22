@@ -16,9 +16,6 @@ type message interface {
 }
 
 
-
-// don't edit below this line
-
 type birthdayMessage struct {
 	birthdayTime  time.Time
 	recipientName string
